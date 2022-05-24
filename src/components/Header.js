@@ -9,12 +9,13 @@ import { isLoggedInVar } from "../apollo";
 import useUser from "../hooks/useUser";
 import routes from "../routes";
 import Avatar from "./Avatar";
+//import Search from "../screens/Search";
 
 const SHeader = styled.header`
   width: 100%;
   border-bottom: 1px solid ${(props) => props.theme.borderColor};
   background-color: ${(props) => props.theme.bgColor};
-  padding: 18px 0px;
+  padding: 18px 3%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,12 +60,14 @@ function Header() {
   const isLoggedIn = useReactiveVar(isLoggedInVar);
   // const { data } = useUser(); //백엔드 콜
 
+  
+
   // dummy me data
   const data = {
     me: {
       id: 1,
       username: "강예영",
-      avatar: "",
+      avatar: "https://www.tamnao.com/data/sv/thumb/SV00001658_3.jpg",
     },
   };
   return (

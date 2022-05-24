@@ -10,9 +10,10 @@ const SAvatar = styled.div`
 
 const Img = styled.img`
   max-width: 100%;
+  width: 100%;
 `;
 
-function Avatar({ url = "", lg = false }) {
+function Avatar({ url = "", lg = true }) {
     return <SAvatar lg={lg}>{url !== "" ? <Img src={url} /> : null}</SAvatar>;
 }
 export default Avatar;
